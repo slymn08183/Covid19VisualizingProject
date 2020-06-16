@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="438.0" prefWidth="876.0" style="-fx-background-image: url(../../Images/covid.jpg); -fx-background-repeat: stretch; -fx-background-position: center center;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.Visual.Graphs.GraphsController">
+   <children>
+      <TableView fx:id="tableGraphFx" opacity="0.9" prefHeight="438.0" prefWidth="732.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="144.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="c1Country" prefWidth="135.0" text="Country" />
+          <TableColumn fx:id="c2TotalCases" prefWidth="81.0" text="Total Cases" />
+            <TableColumn fx:id="c3NewCases" prefWidth="89.0" text="New Cases" />
+            <TableColumn fx:id="c4TotalDeaths" prefWidth="83.0" text="Total Deaths" />
+            <TableColumn fx:id="c5NewDeaths" prefWidth="86.0" text="New Deaths" />
+            <TableColumn fx:id="c6Population" prefWidth="85.0" text="Population" />
+            <TableColumn fx:id="c7Mortality" prefWidth="83.0" text="Mortality" />
+            <TableColumn fx:id="c8AttackRate" prefWidth="83.0" text="Atack Rate" />
+        </columns>
+      </TableView>
+      <LineChart fx:id="lineChart1FX" prefHeight="440.0" prefWidth="740.0" verticalZeroLineVisible="false" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="129.0" AnchorPane.topAnchor="0.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="lineChardNumberAxsisFx" blendMode="MULTIPLY" side="LEFT" />
+        </yAxis>
+         <effect>
+            <Glow />
+         </effect>
+      </LineChart>
+      <StackedBarChart fx:id="stackedBarChart1FX" prefHeight="438.0" prefWidth="755.0" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="121.0" AnchorPane.topAnchor="0.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+         <effect>
+            <Glow />
+         </effect>
+      </StackedBarChart>
+      <StackedBarChart fx:id="stackedBarChart2FX" prefHeight="438.0" prefWidth="755.0" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="121.0" AnchorPane.topAnchor="0.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+         <effect>
+            <Glow />
+         </effect>
+      </StackedBarChart>
+      <LineChart fx:id="lineChart2FX" prefHeight="438.0" prefWidth="755.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="129.0" AnchorPane.topAnchor="0.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+         <effect>
+            <Glow />
+         </effect>
+      </LineChart>
+      <ListView fx:id="listViewForLineChartFX" layoutX="834.0" layoutY="93.0" prefHeight="303.0" prefWidth="135.0" visible="false" AnchorPane.bottomAnchor="42.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="93.0" />
+      <Button fx:id="buttonChangeGraphTypeFx1" layoutX="753.0" layoutY="47.0" mnemonicParsing="false" onAction="#buttonChangeGraphType" prefHeight="25.0" prefWidth="104.0" text="Change Graph" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="47.0" />
+      <Button fx:id="buttonForListViewFX" layoutX="761.0" layoutY="404.0" mnemonicParsing="false" onAction="#buttonForListViewOnAction" text="Set Countries" visible="false" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="28.0" />
+      <Button fx:id="getValuesButton" layoutX="753.0" layoutY="14.0" mnemonicParsing="false" onAction="#GetValuesOnAction" prefHeight="25.0" prefWidth="104.0" text="Get Values" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="14.0" />
+   </children>
+</AnchorPane>
